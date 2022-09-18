@@ -24,11 +24,11 @@ prompt> sh /opt/apache-httpd/httpd/bin/apachectl -k start
 
 # Accessing Apache HTTPD from Host VM
 1. Create SSH Tunnel, with following details
-  a. Type: Local
-  b. Forward port: 8080
-  c. Destination server: localhost:8080
-  d. SSH server: vagrant@localhost:2222
-2.
+	- Type: Local
+	- Forward port: 8080
+	- Destination server: localhost:8080
+	- SSH server: vagrant@localhost:2222
+2. Open a web browser at Host VM, and browse following URL: http://localhost:8080
 
 # Stopping Apache HTTPD
 ```
