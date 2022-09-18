@@ -17,3 +17,20 @@ Development Environment for Apache HTTPD + PHP + MySQL
 5. httpd v2.4.54
 6. php v8.1.10
 
+# Starting Apache HTTPD
+```
+prompt> sh /opt/apache-httpd/httpd/bin/apachectl -k start
+```
+
+# Accessing Apache HTTPD from Host VM
+1. Create SSH Tunnel, with following details
+  a. Type: Local
+  b. Forward port: 8080
+  c. Destination server: localhost:8080
+  d. SSH server: vagrant@localhost:2222
+2.
+
+# Stopping Apache HTTPD
+```
+prompt> sh /opt/apache-httpd/httpd/bin/apachectl -k stop
+```

@@ -67,8 +67,8 @@ Vagrant.configure("2") do |config|
   #   apt-get update
   #   apt-get install -y apache2
   # SHELL
-  config.vm.provision "shell", path: "configure-user-access.sh", run: "once"
   config.vm.provision "shell", path: "install-basic-software.sh", run: "once"
+  config.vm.provision "shell", path: "configure-user-access.sh", run: "once", privileged: false  
   config.vm.provision "shell", path: "install-apache-httpd.sh", run: "once", privileged: false  
   
   

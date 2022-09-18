@@ -11,11 +11,11 @@ echo "> command: ntpdate"
 DEBIAN_FRONTEND=noninteractive apt-get -yq install ntpdate
 ntpdate-debian
 
-echo "> command: gcc"
-DEBIAN_FRONTEND=noninteractive apt-get -yq install gcc
-
 echo "> command: build-essential"
 DEBIAN_FRONTEND=noninteractive apt-get -yq install build-essential
+
+echo "> command: gcc"
+DEBIAN_FRONTEND=noninteractive apt-get -yq install gcc
 
 echo "> command: make"
 DEBIAN_FRONTEND=noninteractive apt-get -yq install make
