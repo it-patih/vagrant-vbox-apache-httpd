@@ -70,6 +70,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "install-basic-software.sh", run: "once"
   config.vm.provision "shell", path: "configure-user-access.sh", run: "once", privileged: false  
   config.vm.provision "shell", path: "install-apache-httpd.sh", run: "once", privileged: false  
-  
+  config.vm.provision "shell", path: "configure-apache-httpd.sh", run: "once", privileged: false   
   
 end

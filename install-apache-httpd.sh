@@ -68,7 +68,7 @@ ln -s /opt/apache-httpd/httpd-2.4.54 /opt/apache-httpd/httpd
 
 echo \"> Configuring apache httpd\"
 cp /opt/apache-httpd/httpd/conf/httpd.conf /opt/apache-httpd/httpd/conf/httpd.conf.$NOW
-sed -i 's/Listen 80/Listen 8080/' /opt/apache-httpd/httpd/conf/httpd.conf
+sed -i \"s/Listen 80/Listen 8080/\" /opt/apache-httpd/httpd/conf/httpd.conf
 
 
 '"
