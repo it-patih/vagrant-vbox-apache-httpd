@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "ubuntu/focal64"
+  config.vm.box = "ubuntu/jammy64"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -71,5 +71,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "configure-user-access.sh", run: "once", privileged: false  
   config.vm.provision "shell", path: "install-apache-httpd.sh", run: "once", privileged: false  
   config.vm.provision "shell", path: "configure-apache-httpd.sh", run: "once", privileged: false   
+  config.vm.provision "shell", path: "install-php.sh", run: "once", privileged: false   
   
 end
