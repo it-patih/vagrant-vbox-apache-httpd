@@ -8,23 +8,32 @@ echo "###"
 
 DEBIAN_FRONTEND=noninteractive apt-get -yq update
 
+echo "> command: ntpdate"
+DEBIAN_FRONTEND=noninteractive apt-get -yq install ntpdate
+ntpdate-debian
+
+echo "> Install: uidmap"
+DEBIAN_FRONTEND=noninteractive apt-get -yq install uidmap
+
+echo "> Install: dbus-user-session"
+DEBIAN_FRONTEND=noninteractive apt-get -yq install dbus-user-session
+
+echo "> command: finger"
+DEBIAN_FRONTEND=noninteractive apt-get -yq install finger
+
+echo "> Install: net-tools"
+DEBIAN_FRONTEND=noninteractive apt-get -yq install net-tools
+
+echo "> command: openssh-server"
+DEBIAN_FRONTEND=noninteractive apt-get -yq install openssh-server
+ufw allow ssh
+systemctl status ssh
+
 echo "> command: build-essential"
 DEBIAN_FRONTEND=noninteractive apt-get -yq install build-essential
 
-# Included in build-essential
-#echo "> command: gcc"
-#DEBIAN_FRONTEND=noninteractive apt-get -yq install gcc
-
-# Included in build-essential
-#echo "> command: make"
-#DEBIAN_FRONTEND=noninteractive apt-get -yq install make
-
 echo "> command: autoconf"
 DEBIAN_FRONTEND=noninteractive apt-get -yq install autoconf
-
-# Included in autoconf
-#echo "> command: perl"
-#DEBIAN_FRONTEND=noninteractive apt-get -yq install perl
 
 echo "> command: libtool"
 DEBIAN_FRONTEND=noninteractive apt-get -yq install libtool
@@ -41,14 +50,8 @@ DEBIAN_FRONTEND=noninteractive apt-get -yq install libxml2-dev
 echo "> command: libreadline-dev"
 DEBIAN_FRONTEND=noninteractive apt-get -yq install libreadline-dev
 
-#echo "> command: libreadline7"
-#DEBIAN_FRONTEND=noninteractive apt-get -yq install libreadline7
-
 echo "> command: libzip-dev"
 DEBIAN_FRONTEND=noninteractive apt-get -yq install libzip-dev
-
-#echo "> command: libzip4"
-#DEBIAN_FRONTEND=noninteractive apt-get -yq install libzip4
 
 echo "> command: libpng-dev"
 DEBIAN_FRONTEND=noninteractive apt-get -yq install libpng-dev
@@ -80,30 +83,6 @@ DEBIAN_FRONTEND=noninteractive apt-get -yq install re2c
 echo "> command: libsqlite3-dev"
 DEBIAN_FRONTEND=noninteractive apt-get -yq install libsqlite3-dev
 
-#echo "> command: sqlite3"
-#DEBIAN_FRONTEND=noninteractive apt-get -yq install sqlite3
-
 echo "> command: libonig-dev"
 DEBIAN_FRONTEND=noninteractive apt-get -yq install libonig-dev
 
-
-echo "> command: finger"
-DEBIAN_FRONTEND=noninteractive apt-get -yq install finger
-
-echo "> Install: uidmap"
-DEBIAN_FRONTEND=noninteractive apt-get -yq install uidmap
-
-echo "> Install: dbus-user-session"
-DEBIAN_FRONTEND=noninteractive apt-get -yq install dbus-user-session
-
-echo "> command: ntpdate"
-DEBIAN_FRONTEND=noninteractive apt-get -yq install ntpdate
-ntpdate-debian
-
-echo "> Install: net-tools"
-DEBIAN_FRONTEND=noninteractive apt-get -yq install net-tools
-
-echo "> command: openssh-server"
-DEBIAN_FRONTEND=noninteractive apt-get -yq install openssh-server
-ufw allow ssh
-systemctl status ssh
