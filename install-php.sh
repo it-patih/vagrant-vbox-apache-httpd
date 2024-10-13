@@ -2,6 +2,7 @@
 
 echo "###"
 echo "### install php.sh ###"
+echo "> command: id"
 id
 echo "###"
 
