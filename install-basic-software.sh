@@ -88,3 +88,27 @@ DEBIAN_FRONTEND=noninteractive apt-get -yq install libsqlite3-dev
 echo "> Install: libonig-dev"
 DEBIAN_FRONTEND=noninteractive apt-get -yq install libonig-dev
 
+echo "> Install: libpcre3-dev"
+DEBIAN_FRONTEND=noninteractive apt-get -yq install libpcre3-dev
+
+echo "> Install: libcurl4-gnutls-dev"
+DEBIAN_FRONTEND=noninteractive apt-get -yq install libcurl4-gnutls-dev
+
+echo "> Install: libcurl4-openssl-dev"
+DEBIAN_FRONTEND=noninteractive apt-get -yq install libcurl4-openssl-dev
+
+echo "> Install: libgeoip-dev"
+DEBIAN_FRONTEND=noninteractive apt-get -yq install libgeoip-dev
+
+echo "> Install: liblmdb-dev"
+DEBIAN_FRONTEND=noninteractive apt-get -yq install liblmdb-dev
+
+echo "> Install: libpcre2-dev"
+DEBIAN_FRONTEND=noninteractive apt-get -yq install libpcre2-dev
+
+echo "> Install: libyajl-dev"
+DEBIAN_FRONTEND=noninteractive apt-get -yq install libyajl-dev
+
+echo "> Install: pkgconf"
+DEBIAN_FRONTEND=noninteractive apt-get -yq install pkgconf
+

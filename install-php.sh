@@ -11,12 +11,12 @@ ssh -q -o StrictHostKeyChecking=no apache@localhost bash -c "'
 id
 
 echo \"> Downloading php\"
-wget https://www.php.net/distributions/php-8.1.10.tar.gz -P /opt/apache-httpd/srclib
-tar -xzf /opt/apache-httpd/srclib/php-8.1.10.tar.gz -C /opt/apache-httpd/srclib
+wget https://www.php.net/distributions/php-8.3.12.tar.gz -P /opt/apache-httpd/srclib
+tar -xzf /opt/apache-httpd/srclib/php-8.3.12.tar.gz -C /opt/apache-httpd/srclib
 
 echo \"> Installing php\"
-cd /opt/apache-httpd/srclib/php-8.1.10
-./configure --prefix=/opt/apache-httpd/lib/php-8.1.10 \
+cd /opt/apache-httpd/srclib/php-8.3.12
+./configure --prefix=/opt/apache-httpd/lib/php-8.3.12 \
     --with-apxs2=/opt/apache-httpd/httpd/bin/apxs \
     --enable-mysqlnd \
     --with-pdo-mysql=mysqlnd \
@@ -47,7 +47,7 @@ cd /opt/apache-httpd/srclib/php-8.1.10
 make
 make install
 
-cp /opt/apache-httpd/srclib/php-8.1.10/php.ini-development /opt/apache-httpd/lib/php-8.1.10/lib/php.ini
+cp /opt/apache-httpd/srclib/php-8.3.12/php.ini-development /opt/apache-httpd/lib/php-8.3.12/lib/php.ini
 
 
 '"
